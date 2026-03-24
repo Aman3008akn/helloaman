@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: telegram-escrow-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node bot.js
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: SUPER_ADMINS
+        sync: false
+      - key: DEFAULT_FEE_PERCENT
+        value: "3"
+      - key: AUTO_CANCEL_TIMEOUT_MINUTES
+        value: "120"
+      - key: REMINDER_INTERVAL_MINUTES
+        value: "30"
