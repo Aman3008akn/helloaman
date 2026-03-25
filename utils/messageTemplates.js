@@ -47,15 +47,15 @@ ${EMOJIS.CHART} STATUS: ${STATUS_DISPLAY[trade.status]}
 ${EMOJIS.CLOCK} Created: ${formatDate(trade.timestamps?.createdAt || trade.createdAt)}`;
 
   if (trade.timestamps?.paymentAt) {
-    message += `\n${EMOJIS.CHECK} *Paid:* ${formatDate(trade.timestamps.paymentAt)}`;
+    message += `\n${EMOJIS.CHECK} Paid: ${formatDate(trade.timestamps.paymentAt)}`;
   }
   
   if (trade.timestamps?.deliveredAt) {
-    message += `\n${EMOJIS.CHECK} *Delivered:* ${formatDate(trade.timestamps.deliveredAt)}`;
+    message += `\n${EMOJIS.CHECK} Delivered: ${formatDate(trade.timestamps.deliveredAt)}`;
   }
   
   if (trade.timestamps?.completedAt) {
-    message += `\n${EMOJIS.SUCCESS} *Completed:* ${formatDate(trade.timestamps.completedAt)}`;
+    message += `\n${EMOJIS.SUCCESS} Completed: ${formatDate(trade.timestamps.completedAt)}`;
   }
   
   if (trade.disputeReason) {
